@@ -9,7 +9,7 @@ Nesse projeto foi implementado um modelo de classificação automática da dific
 
 ## Predição
 
-Para testar o modelo com seus dados, acesso o [Colab](inferencia.ipynb).
+Para testar o modelo com seus dados, acesso o [Colab](inferencia.ipynb), com download dos pesos [aqui](https://drive.google.com/drive/folders/1OIBKc-g8RIjwpQFieasvxnSfstUvvMT_?usp=drive_link).
 
 ## Treinamento
 

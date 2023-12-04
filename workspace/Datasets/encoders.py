@@ -25,21 +25,10 @@ def define_encoders(max_len):
 
             encoded_input = cat((encoded_input_ids, encoded_attention_mask, encoded_token_type_ids), dim = 0).unsqueeze(0)
             encoded_inputs.append(encoded_input)
+    
+        encoded = cat(encoded_inputs)
         
-        try:
-            encoded = cat(encoded_inputs)
-            return encoded
-        except:
-            print('Number of inputs:', len(encoded_inputs))
-            max_dif = max([e.shape[2] for e in encoded_inputs])
-            print('Max shape:', max_dif)
-            for idx, e in enumerate(encoded_inputs):
-                if e.shape[2] != max_len:
-                    print(idx)
-                    print(e.shape[2])
-                    print(inputs[idx])
-                    break
-            return None
+        return encoded
 
     def labels_encoder(labels):
         encoded_labels = []

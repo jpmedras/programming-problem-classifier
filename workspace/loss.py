@@ -1,15 +1,16 @@
 import torch
 from torch import long
 
-def calc_loss(model, dataloader, criterion, device):
-
+def calc_loss(model, dataloader, criterion):
     with torch.no_grad():
-        total_loss = 0.0
+        total_loss = 0.
         for inputs, labels in dataloader:
-            ids = inputs[:, 0].to(device, dtype=long)
-            masks = inputs[:, 1].to(device, dtype=long)
-            tti = inputs[:, 2].to(device, dtype=long)
-            labels = labels.squeeze().to(device, dtype=long)
+            ids = inputs[:, 0].to(model.device, dtype=long)
+            masks = inputs[:, 1].to(model.device, dtype=long)
+            tti = inputs[:, 2].to(model.device, dtype=long)
+            labels = labels.squeeze().to(model.device, dtype=long)
+
+            # print(ids.shape)
 
             outputs = model(ids, masks, tti)
 

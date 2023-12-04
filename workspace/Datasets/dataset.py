@@ -1,5 +1,4 @@
 from torch.utils.data import Dataset
-from torch import tensor
 
 class ProblemDataset(Dataset):
     def __init__(self, data, inputs_encoder, labels_encoder):
@@ -11,3 +10,15 @@ class ProblemDataset(Dataset):
     
     def __getitem__(self, index):
         return self.inputs[index], self.labels[index]
+    
+def tolist(dataset):
+    inputs = []
+    labels = []
+
+    for inp, lab in dataset:
+        inputs.append(inp[0, :].numpy().tolist())
+        labels.append(lab.numpy().tolist())
+    
+    labels = [item for sublist in labels for item in sublist]
+
+    return inputs, labels

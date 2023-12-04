@@ -5,7 +5,7 @@ Um modelo de rede neural para classificar a dificuldade de problemas de programa
 
 ## Descrição
 
-Nesse projeto foi implementado um modelo de classificação automática da dificuldade em problemas de programação para facilitar a seleção de exercícios por estudantes em juízes online (JOs). Reconhece-se que a tarefa de classificação manual demanda tempo e especialistas, motivando o desenvolvimento de um sistema automático baseado em técnicas de aprendizado profundo.
+Nesse projeto foi implementado um modelo de classificação automática da dificuldade em problemas de programação para facilitar a seleção de exercícios por estudantes em juízes online (JOs). A tarefa de classificação manual demanda tempo e especialistas, motivando o desenvolvimento de um sistema automático baseado em técnicas de aprendizado profundo.
 
 ## Predição
 

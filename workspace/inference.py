@@ -1,10 +1,9 @@
 from torch import load
 
 from Datasets.test_dataset import ProblemDataset
-from Datasets.load import load_data
 from Models.model import BERTModule
 
-model_path = 'model_ep2_lr1e-05.pth'
+model_path = 'model_ep5_lr1e-05.pth'
 
 model = BERTModule(n_classes = 3)
 model.load_state_dict(load(model_path))

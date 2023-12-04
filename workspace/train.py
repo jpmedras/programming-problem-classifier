@@ -49,10 +49,10 @@ model = BERTModule(n_classes = 3)
 
 train_losses, test_losses = model.fit(train_loader=train_loader, test_loader=test_loader, epochs = EPOCHS, learning_rate = LEARNING_RATE)
 
+show_loss_evolution(EPOCHS, train_losses, test_losses)
+
 model.evaluate(dataloader=train_loader)
 model.evaluate(dataloader=test_loader)
-
-show_loss_evolution(EPOCHS, train_losses, test_losses)
 
 X_train, y_train = tolist(train_set)
 X_test, y_test = tolist(test_set)

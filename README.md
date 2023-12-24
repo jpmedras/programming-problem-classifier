@@ -1,20 +1,19 @@
-# Classificação de Dificuldade em Problemas de Programação
-Um modelo de rede neural para classificar a dificuldade de problemas de programação.
+# Programming Problems Classification
 
-![Matriz de confusão](results.png)
+A classification system built by a PyTorch model (neural network) used as a basis for recommendation in the context of students taking introductory programming courses, most of the time making use of online judges (like [Codeforces](http://codeforces.com/) or [LeetCode Online Judge](http://leetcode.com/)).
 
-## Descrição
+## Description
 
-Nesse projeto foi implementado um modelo de classificação automática da dificuldade em problemas de programação para facilitar a seleção de exercícios por estudantes em juízes online (JOs). A tarefa de classificação manual demanda tempo e especialistas, motivando o desenvolvimento de um sistema automático baseado em técnicas de aprendizado profundo.
+In this project, it was implemented a classification model to mesure the difficulty (one possible set of class) of programming problems, facilitating recommendation generelly useful for students of introductory programming courses using Online Judge Systems. Comparing with human classification, automatic classification can provide fewer resources (conjunto de especialists or time of classification) and less subjectivity. It was used a fine-tuning model with BERT.
 
-## Predição
+## Demonstration
 
-Para testar o modelo com seus dados, acesso o [Colab](inferencia.ipynb), com download dos pesos [aqui](https://drive.google.com/drive/folders/1OIBKc-g8RIjwpQFieasvxnSfstUvvMT_?usp=drive_link).
+To see a demo of the model with your own data, acess the [Colab](inferencia.ipynb), donwloading the weigths [here](https://drive.google.com/drive/folders/1OIBKc-g8RIjwpQFieasvxnSfstUvvMT_?usp=drive_link).
 
-## Treinamento
+## Training
 
-Para treinar o modelo, siga os seguintes passos:
+To retrain the model, generating your own weights, follow this steps:
 
-1. Faça o download do repositório
-2. Acesso o diretório `workspace`
-3. Execute o seguinte comando `python3 train.py`
+1. Download the repository
+2. Acess the directory `workspace` (with the code)
+3. Execute the command `python3 train.py`
